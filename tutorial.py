@@ -1,3 +1,5 @@
+﻿#!/usr/bin/env python
+#coding: utf-8
 import pycuda.autoinit
 import pycuda.driver as drv
 import numpy
@@ -30,7 +32,9 @@ multiply_them(
         block=(1000,1,1), grid=(1,1))
 print time.time() - start
 
-
+for i in dest - a*b:
+    if i != 0:
+    	print i 
 
 # for i in range(len(a)):
 # 	dest[i] = a[i] * b[i]
